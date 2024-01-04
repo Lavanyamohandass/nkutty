@@ -1,0 +1,23 @@
+		<div class="col-lg-3 hidden-md hidden-sm hidden-xs cless fash-app">
+		    {% for banner in banners %}
+		    <div class="bann">
+		    	<div class="beffect">
+			        {% if banner.link %}
+					    <a href="{{ banner.link }}" class="beff_a">
+					    <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive center-block" />
+					    </a>
+					    {% else %}
+					    <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive center-block" />
+				    {% endif %}
+				    <div class="imgbnrtext cate-text">
+						<div>
+							{{ banner.description }}
+							<a href="{{ banner.link }}" class="btn btn-primary">{{ shop_now }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		    {% endfor %}
+		</div>
+	</div>
+</div>	
